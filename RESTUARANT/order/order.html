@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online | Gourmet Restaurant</title>
+  <link rel="stylesheet" href="order.css">
+  <script defer src="order.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER (عودة إلى الصفحة الرئيسية) ===== -->
+  <header class="order-header">
+    <h1>Order <span>Online</span></h1>
+  </header>
+
+  <!-- ===== ORDER SECTION ===== -->
+  <section class="order-section">
+    <div class="order-container">
+      <h2>Select Your Favorite Dishes</h2>
+      <p>Choose delicious meals and place your order easily.</p>
+
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="/media/Truffle Pasta.jpg" alt="Pizza">
+          <h3>Italian Pizza</h3>
+          <p>Cheesy, crispy and full of flavor.</p>
+          <span class="price">$12.99</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="/media/burger.jpg" alt="Burger">
+          <h3>Beef Burger</h3>
+          <p>Juicy beef with melted cheese.</p>
+          <span class="price">$9.50</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="/media/Bruschetta.jpg" alt="Pasta">
+          <h3>Spaghetti Carbonara</h3>
+          <p>Creamy and rich Italian pasta.</p>
+          <span class="price">$10.00</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="/media/Vegan Salad.jpg" alt="Salad">
+          <h3>Greek Salad</h3>
+          <p>Fresh and healthy with feta cheese.</p>
+          <span class="price">$7.50</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CART SECTION ===== -->
+  <section class="cart-section">
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <p class="total">Total: $<span id="totalPrice">0.00</span></p>
+    <button id="orderNow">Place Order</button>
+  </section>
+  <!-- ===== BACK BUTTON ===== -->
+   <button class="back-home"><a href="/index.html#menu">Back</a></button>
+
+</body>
+</html>

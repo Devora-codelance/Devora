@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="media/rest.svg">
+<title>Gourmet Restaurant</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header" role="banner">
+        <div class="header-top">
+            <div class="logo" id="logo">
+                <img src="media/rest.svg" alt="">
+                <span class="site-title">Gourmet Restaurant</span>
+                <a href="#today-offer" class="offer">Today's Offer</a>
+            </div>
+            <div class="datetime">
+                  <span id="current-date"></span> | 
+                  <span id="current-time"></span>
+                </div>
+
+        <div class="header-actions">
+          <div class="order-btn">
+            <a href="order/order.html">Order Online</a>
+          </div>
+        <li class="language-selector">
+        <select id="languageSwitcher">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </li>
+
+        <button class="dark-toggle" id="darkToggle" aria-pressed="false" aria-label="Toggle dark mode">
+        <span class="moon" aria-hidden="true"><i class="fa-solid fa-cloud-sun-rain"></i></span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+        <span class="hamburger-box"><i class="fa-solid fa-bars"></i>
+        </span>
+        </button>
+        </div>
+        </div>
+
+    <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Main menu">
+    <ul class="nav-list">
+        <li><a href="#home" data-key="home" class="active">Home</a></li>
+        <li><a href="#about" data-key="about">About Us</a></li>
+        <li><a href="#menu" data-key="menu">Menu</a></li>
+        <li><a href="#chefs" data-key="chefs">Our Chefs</a></li>
+        <li><a href="#reservation" data-key="reservation">Reservation</a></li>
+        <li><a href="#services" data-key="services">Services</a></li>
+        <li><a href="#gallery" data-key="gallery">Gallery</a></li>
+        <li><a href="#blog" data-key="blog">Blog</a></li>
+        <li><a href="#reviews" data-key="reviews">Reviews</a></li>
+        <li><a href="#today-offer" data-key="offer" class="nav-offer">Today's Offer</a></li>
+        <li><a href="#stats" data-key="order">STATISTICS</a></li>
+        <li><a href="#contact" data-key="contact">Contact Us</a></li>
+    </ul>
+    </nav>
+    </header>
+
+    <!-- ===== Home Section ===== -->
+<section id="home" class="home-section" data-parallax>
+  <div class="home-overlay"></div>
+  <div class="steam"></div>
+
+  <div class="home-content">
+    <h1 class="home-title">
+      <span id="animatedText">Welcome</span> to <span>Gourmet Restaurant</span>
+    </h1>
+    <p class="home-subtitle">
+      Experience the taste of perfection — fresh, delicious, and made with love.
+    </p>
+
+    <div class="home-buttons">
+      <a href="#menu" class="btn primary-btn">View Menu</a>
+      <a href="#reservation" class="btn secondary-btn">Book a Table</a>
+      <button id="playVideoBtn" class="btn video-btn">
+        ▶ Watch Video
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Video -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-container">
+      <span id="closeVideo">&times;</span>
+    <iframe
+        id="restaurantVideo"
+        src="https://www.youtube.com/embed/KfTtpoIovuk?enablejsapi=1"
+        title="Restaurant Promo Video"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About Section ===== -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80"
+        alt="Restaurant interior"
+      />
+    </div>
+
+    <div class="about-content">
+      <h2>About Our Restaurant</h2>
+      <h3>Discover the story behind every delicious bite 🍴</h3>
+      <p>
+        Founded with passion for authentic cuisine, <strong>Gourmet Restaurant</strong>
+        offers a unique dining experience where tradition meets creativity.
+        Every dish is crafted with fresh ingredients and inspired by love for
+        flavor, quality, and warmth.
+      </p>
+
+      <p>
+        Whether it’s a romantic dinner, a family gathering, or a quick lunch,
+        our cozy atmosphere and exceptional service make every visit
+        unforgettable.
+      </p>
+
+      <a href="#menu" class="btn primary-btn">Explore Our Menu</a>
+      <a href="#reservation" class="btn secondary-btn">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU SECTION ===== -->
+<section id="menu" class="menu-section">
+  <div class="menu-header">
+    <h2>Our Menu</h2>
+    <p>Explore our chef’s curated selection of dishes crafted with love and perfection.</p>
+  </div>
+
+  <!-- ===== MENU CATEGORIES ===== -->
+  <div class="menu-tabs">
+    <button class="menu-tab active" data-category="starters">Starters</button>
+    <button class="menu-tab" data-category="main">Main Dishes</button>
+    <button class="menu-tab" data-category="desserts">Desserts</button>
+    <button class="menu-tab" data-category="drinks">Drinks</button>
+    <button class="menu-tab" data-category="specials">Specials</button>
+    <button class="menu-tab" data-category="vegan">Vegan</button>
+    <button class="menu-tab" data-category="chef">Chef’s Choice</button>
+    <button class="menu-tab" data-category="kids">Kids Menu</button>
+    <button class="menu-tab" data-category="offer">Today’s Offer</button>
+  </div>
+
+  <!-- ===== MENU CONTENT ===== -->
+  <div class="menu-container">
+    <!-- Starters -->
+    <div class="menu-category active" id="starters">
+      <div class="menu-item">
+        <img src="media/Bruschetta.jpg" alt="Bruschetta">
+        <div class="info">
+          <h3>Bruschetta</h3>
+          <p>Grilled bread with tomato, basil, and olive oil</p>
+          <span>$8.99</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="media/Tomato Basil Soup.jpg" alt="Soup">
+        <div class="info">
+          <h3>Tomato Basil Soup</h3>
+          <p>Rich creamy soup with fresh herbs</p>
+          <span>$6.50</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Dishes -->
+    <div class="menu-category" id="main">
+      <div class="menu-item">
+        <img src="media/Grilled Steak.jpg" alt="Steak">
+        <div class="info">
+          <h3>Grilled Steak</h3>
+          <p>Juicy beef steak with garlic butter and herbs</p>
+          <span>$19.99</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="media/Chicken Alfredo.jpg" alt="Pasta">
+        <div class="info">
+          <h3>Chicken Alfredo</h3>
+          <p>Classic creamy pasta with grilled chicken</p>
+          <span>$15.50</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-category" id="desserts">
+      <div class="menu-item">
+        <img src="media/Cheesecake.jpg" alt="Cheesecake">
+        <div class="info">
+          <h3>Cheesecake</h3>
+          <p>Strawberry-topped creamy cheesecake</p>
+          <span>$8.50</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="media/Chocolate Cake.jpg" alt="Chocolate Cake">
+        <div class="info">
+          <h3>Chocolate Cake</h3>
+          <p>Dark chocolate layers with rich frosting</p>
+          <span>$7.99</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-category" id="drinks">
+      <div class="menu-item">
+        <img src="media/Hot Coffee.jpg" alt="Coffee">
+        <div class="info">
+          <h3>Hot Coffee</h3>
+          <p>Freshly brewed with rich aroma</p>
+          <span>$3.50</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="media/Fresh Orange Juice.jpg" alt="Juice">
+        <div class="info">
+          <h3>Fresh Orange Juice</h3>
+          <p>Cold-pressed oranges full of flavor</p>
+          <span>$4.99</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specials -->
+    <div class="menu-category" id="specials">
+      <div class="menu-item highlight">
+        <img src="media/Seafood Delight.jpg" alt="Special Dish">
+        <div class="info">
+          <h3>Seafood Delight</h3>
+          <p>A perfect blend of shrimp, calamari, and crab</p>
+          <span>$22.99</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vegan -->
+    <div class="menu-category" id="vegan">
+      <div class="menu-item">
+        <img src="media/Vegan Salad.jpg" alt="Vegan Salad">
+        <div class="info">
+          <h3>Vegan Salad</h3>
+          <p>Fresh greens, avocado & roasted seeds</p>
+          <span>$9.99</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chef’s Choice -->
+    <div class="menu-category" id="chef">
+      <div class="menu-item highlight">
+        <img src="media/Truffle Pasta.jpg" alt="Truffle Pasta">
+        <div class="info">
+          <h3>Truffle Pasta</h3>
+          <p>Homemade pasta with black truffle and cream</p>
+          <span>$24.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kids Menu -->
+    <div class="menu-category" id="kids">
+      <div class="menu-item">
+        <img src="media/Mini Burger.jpg" alt="Kids Burger">
+        <div class="info">
+          <h3>Mini Burger</h3>
+          <p>Small beef burger with fries and juice</p>
+          <span>$7.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today’s Offer -->
+    <div class="menu-category" id="offer">
+      <div class="menu-item highlight">
+        <img src="media/tacos.jpg" alt="Offer">
+        <div class="info">
+          <h3>Today’s Chef Special</h3>
+          <p>Buy 1 Get 1 Free on our best pasta!</p>
+          <span class="offer-tag">🔥 Limited Time Offer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR CHEFS SECTION ===== -->
+<section id="chefs" class="chefs-section">
+  <!-- Moving Banner -->
+  <div class="chefs-banner">
+    <div class="banner-text">
+      <span>Meet Our Talented Chefs 👨‍🍳 Crafting Culinary Masterpieces Every Day 🍷✨</span>
+      <span>Meet Our Talented Chefs 👨‍🍳 Crafting Culinary Masterpieces Every Day 🍷✨</span>
+      <span>Meet Our Talented Chefs 👨‍🍳 Crafting Culinary Masterpieces Every Day 🍷✨</span>
+      <span>Meet Our Talented Chefs 👨‍🍳 Crafting Culinary Masterpieces Every Day 🍷✨</span>
+      <span>Meet Our Talented Chefs 👨‍🍳 Crafting Culinary Masterpieces Every Day 🍷✨</span>
+      <span>Meet Our Talented Chefs 👨‍🍳 Crafting Culinary Masterpieces Every Day 🍷✨</span>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <h2>Our Chefs</h2>
+    <p>Meet the masters behind our exquisite dishes</p>
+  </div>
+
+  <div class="chefs-container">
+    <!-- Chef 1 -->
+    <div class="chef-card">
+      <div class="chef-img">
+            <img src="media/Head Chef.jpg" alt="Chef John Doe">
+        <div class="chef-overlay">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3>John Doe</h3>
+      <span>Head Chef</span>
+      <p>Specialist in fine French cuisine with 15 years of experience.</p>
+    </div>
+
+    <!-- Chef 2 -->
+    <div class="chef-card">
+      <div class="chef-img">
+            <img src="media/Pastry Chef.jpg" alt="Chef Maria Lopez">
+        <div class="chef-overlay">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3>Maria Lopez</h3>
+      <span>Pastry Chef</span>
+      <p>Expert in desserts and sweet creations that melt hearts.</p>
+    </div>
+
+    <!-- Chef 3 -->
+    <div class="chef-card">
+      <div class="chef-img">
+            <img src="media/Sushi Master.jpg" alt="Chef Kenji Sato">
+        <div class="chef-overlay">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3>Kenji Sato</h3>
+      <span>Sushi Master</span>
+      <p>Bringing authentic Japanese flavors with a creative modern twist.</p>
+    </div>
+
+    <!-- Chef 4 -->
+    <div class="chef-card">
+      <div class="chef-img">
+            <img src="media/Vegan Cuisine Chef.jpg" alt="Chef Laura Green">
+        <div class="chef-overlay">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <h3>Laura Green</h3>
+      <span>Vegan Cuisine Chef</span>
+      <p>Innovative plant-based dishes inspired by nature’s beauty.</p>
+    </div>
+  </div>
+
+  <!-- Meet the Team Button -->
+  <div class="chefs-button">
+    <a href="team/team.html" class="meet-team-btn">Meet the Full Team</a>
+  </div>
+</section>
+
+<!-- ===== RESERVATION SECTION ===== -->
+<section id="reservation" class="reservation-section">
+  <div class="reservation-container">
+    <div class="reservation-image">
+      <img src="media/reserved.jpg" alt="Restaurant Table">
+    </div>
+
+    <div class="reservation-content">
+      <h2>Book a Table</h2>
+      <p>Reserve your table easily and enjoy a memorable dining experience with us.</p>
+
+      <form id="reservationForm" class="reservation-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Full Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" placeholder="Phone Number" required />
+        </div>
+        <div class="form-group">
+          <input type="date" id="date" required />
+        </div>
+        <div class="form-group">
+          <input type="time" id="time" required />
+        </div>
+        <div class="form-group">
+          <select id="people" required>
+            <option value="">Number of Guests</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 People</option>
+            <option value="3">3 People</option>
+            <option value="4">4 People</option>
+            <option value="5">5 People</option>
+            <option value="+6">+6 People</option>
+          </select>
+        </div>
+        <button type="submit" class="reserve-btn">Reserve Now</button>
+      </form>
+
+      <div id="reservationMessage" class="reservation-message"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SERVICES SECTION ===== -->
+<section id="services" class="services-section">
+  <div class="section-header">
+    <h2>Our Services</h2>
+    <p>We provide a complete dining experience — from kitchen to your table</p>
+  </div>
+
+  <div class="services-container">
+    <!-- Service 1 -->
+    <div class="service-card">
+      <i class="fas fa-utensils"></i>
+      <h3>Fine Dining</h3>
+      <p>Experience an unforgettable atmosphere and world-class meals crafted by our top chefs.</p>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card">
+      <i class="fas fa-motorcycle"></i>
+      <h3>Fast Delivery</h3>
+      <p>Delicious dishes delivered right to your doorstep — hot and fresh, anytime you need.</p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+      <i class="fas fa-birthday-cake"></i>
+      <h3>Private Events</h3>
+      <p>Book our exclusive space for your celebrations, corporate events, or romantic dinners.</p>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card">
+      <i class="fas fa-wine-glass-alt"></i>
+      <h3>Catering</h3>
+      <p>Customized catering services for weddings, birthdays, and business gatherings.</p>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="service-card">
+      <i class="fas fa-concierge-bell"></i>
+      <h3>Online Reservation</h3>
+      <p>Reserve your table with just a few clicks and get instant confirmation by email.</p>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="service-card">
+      <i class="fas fa-seedling"></i>
+      <h3>Healthy Menu</h3>
+      <p>Enjoy vegan, vegetarian, and gluten-free options carefully designed for your health.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section id="gallery" class="gallery-section">
+  <div class="section-header">
+    <h2>Our Gallery</h2>
+    <p>Discover the taste and atmosphere that make our restaurant unique</p>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="media/gallery2.jpg" alt="Dish 1">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80" alt="Dish 2">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" alt="Interior">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="Chef at work">
+    </div>
+    <div class="gallery-item">
+      <img src="media/gallery1.jpg" alt="Dessert">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80" alt="Table setting">
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="">
+  </div>
+</section>
+
+<!-- ===== BLOG SECTION ===== -->
+<section id="blog" class="blog-section">
+  <div class="section-header">
+    <h2>Our Blog</h2>
+    <p>Discover our latest news, recipes, and culinary stories</p>
+  </div>
+
+  <div class="blog-container">
+    <!-- Blog Card 1 -->
+    <div class="blog-card">
+      <div class="blog-image">
+        <img src="media/pasta.jpg" alt="Delicious Pasta">
+      </div>
+      <div class="blog-content">
+        <h3>Secrets Behind Perfect Pasta</h3>
+        <p>Learn how our chefs prepare fresh handmade pasta using traditional Italian techniques and premium ingredients.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <div class="blog-image">
+        <img src="media/healthy.jpg" alt="Healthy Breakfast">
+      </div>
+      <div class="blog-content">
+        <h3>Healthy Breakfast Ideas</h3>
+        <p>Kickstart your day with delicious and nutritious breakfast recipes that boost your energy and mood.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <div class="blog-image">
+        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80" alt="Chef Interview">
+      </div>
+      <div class="blog-content">
+        <h3>Interview with Our Head Chef</h3>
+        <p>Get to know our talented head chef, his culinary inspirations, and his vision for the restaurant’s future.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS SECTION ===== -->
+<section id="reviews" class="reviews-section">
+  <div class="section-header">
+    <h2>Customer Reviews</h2>
+    <p>What our guests say about their dining experience</p>
+  </div>
+
+  <div class="reviews-container">
+    <!-- Review 1 -->
+    <div class="review-card">
+      <div class="reviewer-info">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer 1">
+        <div>
+          <h3>Sarah Johnson</h3>
+          <p>New York, USA</p>
+        </div>
+      </div>
+      <p class="review-text">
+        “The food was absolutely delicious, and the staff were incredibly friendly. The atmosphere is cozy and elegant — highly recommended!”
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card">
+      <div class="reviewer-info">
+        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Customer 2">
+        <div>
+          <h3>James Carter</h3>
+          <p>London, UK</p>
+        </div>
+      </div>
+      <p class="review-text">
+        “One of the best dining experiences I've ever had. Every dish was flavorful and beautifully presented. A must-visit restaurant!”
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card">
+      <div class="reviewer-info">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer 3">
+        <div>
+          <h3>Emily Brown</h3>
+          <p>Toronto, Canada</p>
+        </div>
+      </div>
+      <p class="review-text">
+        “Amazing experience! The chef personally checked on us, and the dessert was out of this world. Can’t wait to come back.”
+      </p>
+      <div class="stars">★★★★☆</div>
+    </div>
+  </div>
+  <!-- Leave Review Button -->
+<div class="leave-review-container">
+  <button id="openReviewModal" class="leave-review-btn">⭐ Leave a Review</button>
+</div>
+
+<!-- Review Modal -->
+<div id="reviewModal" class="review-modal">
+  <div class="review-modal-content">
+    <span id="closeReviewModal" class="close">&times;</span>
+    <h3>Share Your Experience</h3>
+    <form
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+      class="review-form"
+    >
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Review" required></textarea>
+
+      <label for="rating">Rating:</label>
+      <select name="rating" id="rating" required>
+        <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
+        <option value="4">⭐⭐⭐⭐ (Very Good)</option>
+        <option value="3">⭐⭐⭐ (Good)</option>
+        <option value="2">⭐⭐ (Fair)</option>
+        <option value="1">⭐ (Poor)</option>
+      </select>
+
+      <button type="submit" class="submit-review-btn">Submit Review</button>
+    </form>
+  </div>
+</div>
+
+</section>
+
+<!-- ===== TODAY'S OFFER SECTION ===== -->
+<section id="today-offer" class="offer-section">
+  <div class="offer-container">
+    <h2 class="section-title">Today's <span>Offer</span></h2>
+    <p class="section-subtitle">
+      Discover our special dishes available only for today!
+    </p>
+
+    <div class="offer-grid">
+      <!-- Offer 1 -->
+      <div class="offer-card">
+        <div class="offer-img">
+          <img src="media/pizza.jpg" alt="Pizza">
+          <span class="discount">-20%</span>
+        </div>
+        <div class="offer-info">
+          <h3>Margherita Pizza</h3>
+          <p>Fresh mozzarella, basil, and tomato sauce on a thin crust.</p>
+          <div class="price">
+            <span class="old-price">14.99$</span>
+            <span class="new-price">11.99$</span>
+          </div>
+          <button class="btn order-btn">Order Now</button>
+        </div>
+      </div>
+
+      <!-- Offer 2 -->
+      <div class="offer-card">
+        <div class="offer-img">
+          <img src="media/burger.jpg" alt="Burger">
+          <span class="discount">-25%</span>
+        </div>
+        <div class="offer-info">
+          <h3>Beef Deluxe Burger</h3>
+          <p>Grilled beef, cheese, lettuce, tomato & house special sauce.</p>
+          <div class="price">
+            <span class="old-price">12.99$</span>
+            <span class="new-price">9.74$</span>
+          </div>
+          <button class="btn order-btn">Order Now</button>
+        </div>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="offer-card">
+        <div class="offer-img">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+          <span class="discount">-15%</span>
+        </div>
+        <div class="offer-info">
+          <h3>Creamy Alfredo Pasta</h3>
+          <p>Fettuccine tossed in creamy Alfredo sauce & parmesan cheese.</p>
+          <div class="price">
+            <span class="old-price">13.50$</span>
+            <span class="new-price">11.47$</span>
+          </div>
+          <button class="btn order-btn">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATISTICS SECTION ===== -->
+<section id="stats" class="stats-section">
+  <div class="stats-container">
+    <h2 class="section-title">Our <span>Statistics</span></h2>
+    <p class="section-subtitle">A quick look at our restaurant’s achievements and performance</p>
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <i class="fas fa-utensils"></i>
+        <h3 class="counter" data-target="3500">0</h3>
+        <p>Dishes Served</p>
+      </div>
+
+      <div class="stat-box">
+        <i class="fas fa-smile"></i>
+        <h3 class="counter" data-target="1200">0</h3>
+        <p>Happy Customers</p>
+      </div>
+
+      <div class="stat-box">
+        <i class="fas fa-user-tie"></i>
+        <h3 class="counter" data-target="25">0</h3>
+        <p>Professional Chefs</p>
+      </div>
+
+      <div class="stat-box">
+        <i class="fas fa-award"></i>
+        <h3 class="counter" data-target="10">0</h3>
+        <p>Years of Experience</p>
+      </div>
+    </div>
+
+    <!-- ===== PERFORMANCE PROGRESS ===== -->
+    <div class="performance">
+      <h3>Performance Overview</h3>
+
+      <div class="progress-item">
+        <span>Customer Satisfaction</span>
+        <div class="progress-bar"><div class="progress-fill" data-percentage="95"></div></div>
+      </div>
+
+      <div class="progress-item">
+        <span>Service Speed</span>
+        <div class="progress-bar"><div class="progress-fill" data-percentage="90"></div></div>
+      </div>
+
+      <div class="progress-item">
+        <span>Food Quality</span>
+        <div class="progress-bar"><div class="progress-fill" data-percentage="98"></div></div>
+      </div>
+
+      <div class="progress-item">
+        <span>Customer Engagement</span>
+        <div class="progress-bar"><div class="progress-fill" data-percentage="85"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2 class="section-title">Contact <span>Us</span></h2>
+    <p class="section-subtitle">We’d love to hear from you! Feel free to reach out anytime.</p>
+
+    <div class="contact-content">
+      <!-- Left side: Contact info -->
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Address</h4>
+            <p>Qasr Aoulad El-Hadj, Timimoun, Algeria</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+213 659 394 250</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>gourmet@restaurant.com</p>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13922.233318318005!2d0.21397054195403506!3d29.2659319156889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x127571881cce96e5%3A0x24ae2badd65aba35!2sH%C3%B4tel%20Djenane%20Malek!5e0!3m2!1sfr!2sdz!4v1760451171391!5m2!1sfr!2sdz"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Right side: Contact form -->
+      <div class="contact-form-container">
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          class="contact-form"
+        >
+          <h3>Send Us a Message</h3>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-box about">
+      <h2>Gourmet Restaurant</h2>
+      <p>Experience the taste of excellence. Our dishes are crafted with passion, served with love, and made from the freshest ingredients.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#chefs">Our Chefs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-box contact">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-map-marker-alt"></i>Qasr Aoulad El-Hadj, Timimoun, Algeria</p>
+      <p><i class="fas fa-phone"></i>+213 659 394 250</p>
+      <p><i class="fas fa-envelope"></i> info@gourmet.com</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-box newsletter">
+      <h3>Subscribe</h3>
+      <p>Join our newsletter to get the latest updates and offers.</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 <span>Gourmet Restaurant</span> | All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

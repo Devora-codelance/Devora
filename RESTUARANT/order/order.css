@@ -1,0 +1,149 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fffaf4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.order-header {
+  text-align: center;
+  background: #e67e22;
+  color: white;
+  padding: 0.1rem 0;
+  position: relative;
+}
+
+.order-header span {
+  color: #fff7d9;
+}
+
+.order-section {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.order-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+.order-section p {
+  color: #555;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 1rem 0 0.5rem;
+}
+.menu-item p{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.price {
+  font-weight: 700;
+  color: #e67e22;
+}
+
+.add-btn {
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-btn:hover {
+  background: #cf6b0f;
+}
+
+/* Cart Section */
+.cart-section {
+  text-align: center;
+  background: #fff3e0;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+#cart-list {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+#cart-list li {
+  background: white;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+#orderNow {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#orderNow:hover {
+  background: #219150;
+}
+
+/* back home link */
+.back-home a {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  background: rgba(0,0,0,0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+.back-home a:hover {
+  background: rgba(0,0,0,0.4);
+}
