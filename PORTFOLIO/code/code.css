@@ -1,0 +1,171 @@
+/*
+<style>
+  p { color: red; }
+</style>
+*/
+
+/*
+<p style="color: red;">نص أحمر</p>
+*/
+
+/*
+<link rel="stylesheet" href="style.css">
+*/
+
+/*
+| العنصر                 | الشرح                                                     |
+| ---------------------- | --------------------------------------------------------- |
+| `selector`             | العنصر الذي نريد تنسيقه (مثل `p`, `div`, `.class`, `#id`) |
+| `{ property: value; }` | الخاصية والقيمة (الأمر).                                  |
+*/
+p {
+  color: blue;
+  font-size: 20px;
+}
+
+/*
+| الخاصية               | الشرح                             | مثال                               |
+| --------------------- | --------------------------------- | ---------------------------------- |
+| `color`               | لون النص                          | `color: red;`                      |
+| `background-color`    | لون الخلفية                       | `background-color: lightblue;`     |
+| `background-image`    | وضع صورة كخلفية                   | `background-image: url('bg.jpg');` |
+| `background-repeat`   | تكرار الصورة أو لا                | `background-repeat: no-repeat;`    |
+| `background-size`     | حجم الصورة (cover, contain, auto) | `background-size: cover;`          |
+| `background-position` | موضع الصورة                       | `background-position: center;`     |
+| `opacity`             | الشفافية (من 0 إلى 1)             | `opacity: 0.7;`                    |
+*/
+
+/*
+| الخاصية           | الشرح                                       | مثال                                |
+| ----------------- | ------------------------------------------- | ----------------------------------- |
+| `font-family`     | نوع الخط                                    | `font-family: 'Arial', sans-serif;` |
+| `font-size`       | حجم الخط                                    | `font-size: 18px;`                  |
+| `font-weight`     | سماكة الخط (bold, normal, 100–900)          | `font-weight: bold;`                |
+| `font-style`      | شكل الخط (italic, normal)                   | `font-style: italic;`               |
+| `text-align`      | محاذاة النص (left, center, right)           | `text-align: center;`               |
+| `text-decoration` | تحت خط أو فوقه                              | `text-decoration: underline;`       |
+| `text-transform`  | تحويل النص (uppercase/lowercase/capitalize) | `text-transform: uppercase;`        |
+| `letter-spacing`  | المسافة بين الحروف                          | `letter-spacing: 2px;`              |
+| `line-height`     | المسافة بين الأسطر                          | `line-height: 1.5;`                 |
+| `word-spacing`    | المسافة بين الكلمات                         | `word-spacing: 5px;`                |
+*/
+
+/*
+| الخاصية         | الشرح                                       | مثال                             |
+| --------------- | ------------------------------------------- | -------------------------------- |
+| `width`         | عرض العنصر                                  | `width: 300px;`                  |
+| `height`        | ارتفاع العنصر                               | `height: 150px;`                 |
+| `max-width`     | العرض الأقصى                                | `max-width: 100%;`               |
+| `min-width`     | العرض الأدنى                                | `min-width: 200px;`              |
+| `margin`        | المسافة الخارجية حول العنصر                 | `margin: 20px;`                  |
+| `padding`       | المسافة الداخلية داخل العنصر                | `padding: 10px;`                 |
+| `border`        | حدود العنصر                                 | `border: 2px solid black;`       |
+| `border-radius` | زوايا دائرية                                | `border-radius: 10px;`           |
+| `box-shadow`    | ظل حول العنصر                               | `box-shadow: 2px 2px 10px gray;` |
+| `overflow`      | ما يحدث عند تجاوز المحتوى (hidden / scroll) | `overflow: auto;`                |
+| `box-sizing`    | يحدد طريقة حساب الحجم                       | `box-sizing: border-box;`        |
+*/
+
+/*
+| الخاصية                          | الشرح                                                      | مثال                  |
+| -------------------------------- | ---------------------------------------------------------- | --------------------- |
+| `display`                        | نوع العرض (block / inline / flex / grid)                   | `display: flex;`      |
+| `position`                       | وضع العنصر (static / relative / absolute / fixed / sticky) | `position: relative;` |
+| `top`, `bottom`, `left`, `right` | لتحديد موقع العنصر عند استخدام position                    | `top: 20px;`          |
+| `float`                          | تحريك العنصر لليمين أو اليسار                              | `float: right;`       |
+| `clear`                          | منع العناصر من الالتفاف حول عنصر آخر                       | `clear: both;`        |
+| `z-index`                        | ترتيب الطبقات (العنصر فوق/تحت الآخر)                       | `z-index: 10;`        |
+*/
+
+/*
+| الخاصية           | الشرح                            | مثال                       |
+| ----------------- | -------------------------------- | -------------------------- |
+| `display: flex;`  | تفعيل نظام Flexbox               | `display: flex;`           |
+| `flex-direction`  | اتجاه العناصر (row / column)     | `flex-direction: row;`     |
+| `justify-content` | محاذاة العناصر أفقيًا            | `justify-content: center;` |
+| `align-items`     | محاذاة العناصر عموديًا           | `align-items: center;`     |
+| `flex-wrap`       | السماح للعناصر بالنزول لسطر جديد | `flex-wrap: wrap;`         |
+| `gap`             | المسافة بين العناصر              | `gap: 10px;`               |
+*/
+
+/*
+| الخاصية                 | الشرح                                | مثال                                  |
+| ----------------------- | ------------------------------------ | ------------------------------------- |
+| `display: grid;`        | تفعيل نظام الشبكة                    | `display: grid;`                      |
+| `grid-template-columns` | عدد الأعمدة وحجمها                   | `grid-template-columns: 1fr 1fr 1fr;` |
+| `grid-template-rows`    | عدد الصفوف                           | `grid-template-rows: 100px auto;`     |
+| `gap`                   | المسافة بين العناصر                  | `gap: 20px;`                          |
+| `grid-column`           | تحديد موقع العنصر (من عمود إلى عمود) | `grid-column: 1 / 3;`                 |
+| `grid-row`              | تحديد الصفوف                         | `grid-row: 1 / 2;`                    |
+*/
+
+/*
+| الخاصية       | الشرح                   | مثال                           |
+| ------------- | ----------------------- | ------------------------------ |
+| `transition`  | تحديد حركة عند التغيير  | `transition: all 0.3s ease;`   |
+| `transform`   | لتدوير/تكبير/نقل العنصر | `transform: scale(1.2);`       |
+| `rotate()`    | تدوير العنصر            | `transform: rotate(45deg);`    |
+| `scale()`     | تكبير أو تصغير          | `transform: scale(1.1);`       |
+| `translate()` | تحريك العنصر            | `transform: translateX(50px);` |
+| `skew()`      | إمالة العنصر            | `transform: skewX(10deg);`     |
+*/
+
+/*
+| الخاصية                     | الشرح              | مثال                                              |
+| --------------------------- | ------------------ | ------------------------------------------------- |
+| `@keyframes`                | تحديد حركة معينة   | `@keyframes move { from{left:0} to{left:100px} }` |
+| `animation-name`            | اسم الحركة         | `animation-name: move;`                           |
+| `animation-duration`        | مدة الحركة         | `animation-duration: 2s;`                         |
+| `animation-iteration-count` | عدد مرات التكرار   | `animation-iteration-count: infinite;`            |
+| `animation-delay`           | تأخير بداية الحركة | `animation-delay: 1s;`                            |
+| `animation-direction`       | اتجاه الحركة       | `animation-direction: alternate;`                 |
+*/
+
+/*
+| الخاصية          | الشرح                                | مثال                  |
+| ---------------- | ------------------------------------ | --------------------- |
+| `cursor`         | شكل المؤشر عند المرور                | `cursor: pointer;`    |
+| `visibility`     | إظهار أو إخفاء العنصر (يحجز مكانه)   | `visibility: hidden;` |
+| `display: none;` | إخفاء العنصر تمامًا (لا يحجز مكانًا) | `display: none;`      |
+| `overflow`       | التعامل مع المحتوى الزائد            | `overflow: scroll;`   |
+*/
+
+/*
+| الصيغة    | الشرح                             | مثال                           |
+| --------- | --------------------------------- | ------------------------------ |
+| اسم اللون | بسيط                              | `color: red;`                  |
+| Hex       | لون سداسي                         | `color: #ff0000;`              |
+| RGB       | نظام الألوان الأحمر/الأخضر/الأزرق | `color: rgb(255, 0, 0);`       |
+| RGBA      | مثل RGB لكن مع الشفافية           | `color: rgba(255, 0, 0, 0.5);` |
+| HSL       | تدرج اللون والسطوع                | `color: hsl(120, 100%, 50%);`  |
+*/
+
+/*
+| الخاصية  | الشرح                           | مثال |
+| -------- | ------------------------------- | ---- |
+| `@media` | لتطبيق تنسيق خاص حسب حجم الشاشة |      |
+*/
+@media (max-width: 768px) {
+  body { background-color: lightgray; }
+}
+
+/*
+| الصيغة        | الشرح                                 | مثال                                      |
+| ------------- | ------------------------------------- | ----------------------------------------- |
+| `*`           | يختار كل العناصر                      | `* { margin: 0; }`                        |
+| `p`           | يختار كل عناصر `<p>`                  | `p { color: blue; }`                      |
+| `.class`      | يختار كل العناصر التي تحمل هذا الكلاس | `.box { color: red; }`                    |
+| `#id`         | يختار العنصر ذو المعرف المحدد         | `#main { font-size: 20px; }`              |
+| `div p`       | يختار كل `<p>` داخل `<div>`           | `div p { color: green; }`                 |
+| `a:hover`     | تنسيق عند مرور الماوس                 | `a:hover { color: orange; }`              |
+| `input:focus` | تنسيق عند تحديد الخانة                | `input:focus { border: 2px solid blue; }` |
+| `nth-child()` | يختار العنصر رقم كذا                  | `li:nth-child(2) { color: red; }`         |
+*/
+
+/*
+| الخاصية           | الشرح                                        | مثال                           |
+| ----------------- | -------------------------------------------- | ------------------------------ |
+| `filter`          | تأثير على الصور (blur, brightness, contrast) | `filter: blur(3px);`           |
+| `backdrop-filter` | تأثير خلفي مثل الزجاج                        | `backdrop-filter: blur(10px);` |
+| `mix-blend-mode`  | دمج الألوان بين العناصر                      | `mix-blend-mode: multiply;`    |
+*/

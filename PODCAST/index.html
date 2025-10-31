@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulCast - Professional Podcast</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="media/logo.png" alt="">
+                <h1>Soul<span>Cast</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#episodes" class="nav-link">Episodes</a></li>
+                    <li><a href="#categories" class="nav-link">Categories</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#guests" class="nav-link">Guests</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#subscribe" class="subscribe-btn nav-link">Subscribe</a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1>Welcome to Soul<span>Cast</span></h1>
+                <p>Discover inspiring stories, amazing guests, and exclusive podcasts every week!</p>
+                <button class="play-btn"><a href="#episodes">🎧 Listen Now</a></button>
+            </div>
+        </section>
+
+<!-- Episodes Section -->
+        <section id="episodes" class="episodes-section">
+            <div class="container">
+                <h2 class="section-title">Latest Episodes</h2>
+                <div class="episodes-grid">
+                    <!-- حلقة 1 -->
+                    <div class="episode-card">
+                        <img src="media/epis1.jpg" alt="Episode 1">
+                        <div class="episode-info">
+                            <h3>Episode 1: Inspiring Stories</h3>
+                            <p>Discover amazing stories of people who achieved their dreams against all odds.</p>
+                            <audio controls>
+                                <source src="audio/episode1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+
+                    <!-- حلقة 2 -->
+                    <div class="episode-card">
+                        <img src="media/epis2.jpg" alt="Episode 2">
+                        <div class="episode-info">
+                            <h3>Episode 2: Tech Innovations</h3>
+                            <p>Explore the latest technology innovations that are shaping our future.</p>
+                            <audio controls>
+                                <source src="audio/episode2.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+
+                    <!-- حلقة 3 -->
+                    <div class="episode-card">
+                        <img src="media/epis3.jpg" alt="Episode 3">
+                        <div class="episode-info">
+                            <h3>Episode 3: Personal Growth</h3>
+                            <p>Tips and insights for personal development and achieving your goals.</p>
+                            <audio controls>
+                                <source src="audio/episode3.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Categories Section -->
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <h2 class="section-title">Podcast Categories</h2>
+
+                <!-- Buttons for filtering -->
+                <div class="category-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="inspiration">Inspiration</button>
+                    <button class="filter-btn" data-category="technology">Technology</button>
+                    <button class="filter-btn" data-category="growth">Personal Growth</button>
+                </div>
+
+                <!-- Episodes Grid (same cards as before with category attribute) -->
+                <div class="episodes-grid" id="episodesGrid">
+                    <div class="episode-card" data-category="inspiration">
+                        <img src="media/epis1.jpg" alt="Episode 1">
+                        <div class="episode-info">
+                            <h3>Episode 1: Inspiring Stories</h3>
+                            <p>Discover amazing stories of people who achieved their dreams against all odds.</p>
+                            <audio controls>
+                                <source src="audio/episode1.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="episode-card" data-category="technology">
+                        <img src="media/epis2.jpg" alt="Episode 2">
+                        <div class="episode-info">
+                            <h3>Episode 2: Tech Innovations</h3>
+                            <p>Explore the latest technology innovations that are shaping our future.</p>
+                            <audio controls>
+                                <source src="audio/episode2.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="episode-card" data-category="growth">
+                        <img src="media/epis3.jpg" alt="Episode 3">
+                        <div class="episode-info">
+                            <h3>Episode 3: Personal Growth</h3>
+                            <p>Tips and insights for personal development and achieving your goals.</p>
+                            <audio controls>
+                                <source src="audio/episode3.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2 class="section-title">Latest Articles</h2>
+                <div class="blog-grid">
+                    <!-- مقالة 1 -->
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Blog 1">
+                        <div class="blog-info">
+                            <h3>5 Tips for a Productive Morning</h3>
+                            <p>Learn simple techniques to start your day with energy and focus, inspired by our podcast guests.</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- مقالة 2 -->
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Blog 2">
+                        <div class="blog-info">
+                            <h3>Top 10 Tech Innovations in 2025</h3>
+                            <p>A summary of the most exciting technology innovations that were discussed in our recent episodes.</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- مقالة 3 -->
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Blog 3">
+                        <div class="blog-info">
+                            <h3>How to Stay Motivated</h3>
+                            <p>Insights from successful people on staying motivated and overcoming obstacles in daily life.</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Featured Guests Section -->
+        <section id="guests" class="guests-section">
+            <div class="container">
+                <h2 class="section-title">Featured Guests</h2>
+                <div class="guests-grid">
+                    <!-- Guest 1 -->
+                    <div class="guest-card">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Guest 1">
+                        <div class="guest-info">
+                            <h3>John Doe</h3>
+                            <p>Entrepreneur & Speaker</p>
+                        </div>
+                    </div>
+
+                    <!-- Guest 2 -->
+                    <div class="guest-card">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Guest 2">
+                        <div class="guest-info">
+                            <h3>Jane Smith</h3>
+                            <p>Tech Innovator</p>
+                        </div>
+                    </div>
+
+                    <!-- Guest 3 -->
+                    <div class="guest-card">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Guest 3">
+                        <div class="guest-info">
+                            <h3>Michael Lee</h3>
+                            <p>Author & Motivational Coach</p>
+                        </div>
+                    </div>
+
+                    <!-- Guest 4 -->
+                    <div class="guest-card">
+                        <img src="media/sara.jpg" alt="Guest 4">
+                        <div class="guest-info">
+                            <h3>Sarah Connor</h3>
+                            <p>Digital Creator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About SoulCast</h2>
+                <div class="about-content">
+                    <!-- نص About -->
+                    <div class="about-text">
+                        <h3>Who We Are</h3>
+                        <p>SoulCast is a platform where inspiring stories meet insightful conversations. Our podcast brings together experts, creatives, and innovators to share their experiences and lessons with the world.</p>
+
+                        <h3>Our Mission</h3>
+                        <p>We aim to educate, entertain, and motivate our listeners by delivering high-quality content that inspires personal growth and professional development.</p>
+
+                        <h3>Our Vision</h3>
+                        <p>To become a leading podcast platform that connects people through meaningful stories and impactful discussions.</p>
+                    </div>
+
+                    <!-- صورة About -->
+                    <div class="about-image">
+                        <img src="media/logo.png" alt="About SoulCast">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <!-- Form -->
+                    <form class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+
+                    <!-- Social Media -->
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Subscribe Section -->
+        <section id="subscribe" class="subscribe-section">
+            <div class="container">
+                <h2 class="section-title">Stay Updated with SoulCast</h2>
+                <p class="subscribe-text">Subscribe to our newsletter and never miss an episode! Get exclusive content, tips, and updates delivered straight to your inbox.</p>
+                
+                <!-- Subscribe Form -->
+                <div class="subscribe-form-container">
+                    <form class="subscribe-form">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                    <p class="subscribe-note">No spam, only exciting content!</p>
+                </div>
+
+                <!-- Social Media Section 
+                <div class="subscribe-social">
+                    <h3>Follow Us for More</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>-->
+            </div>
+        </section>
+
+    </main>
+
+<!-- Footer -->
+<footer class="footer-section">
+    <div class="container footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <h3>SoulCast</h3>
+            <p>Empowering voices through stories.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#episodes">Episodes</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#guests">Guests</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <form class="footer-subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <p class="footer-copy">&copy; 2025 SoulCast. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn"><i class="fa-solid fa-angles-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ====== الخلفية ====== */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: url(hidden.png) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.content {
+    width: 90%;
+    min-height: 85vh;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+/* ====== الهيدر ====== */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+}
+
+nav .logo {
+    font-size: 28px;
+    color: darksalmon;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    transition: 0.4s;
+}
+
+nav ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #363642;
+}
+
+nav ul li a:hover,
+.active {
+    color: darksalmon;
+}
+
+/* زر القائمة (الهاتف) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: darksalmon;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* ====== المحتوى ====== */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.section-1 {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section-1 h1 {
+    margin-bottom: 20px;
+    font-size: 46px;
+    color: #363642;
+}
+
+.section-1 h3 {
+    color: darksalmon;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.section-1 p {
+    font-size: 18px;
+    color: #363642;
+    margin-bottom: 35px;
+}
+
+.section-1 .btn {
+    width: fit-content;
+    padding: 12px 30px;
+    background-color: darksalmon;
+    border: 2px solid #363642;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.section-1 .btn:hover {
+    background-color: transparent;
+    color: darksalmon;
+}
+
+.section-2 {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 img {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* ====== وسائل التواصل ====== */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    left: 10px;
+    bottom: 180px;
+}
+
+.social-media a i {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: darksalmon;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.3s all;
+}
+
+.social-media a i:hover {
+    background-color: transparent;
+    color: darksalmon;
+}
+
+/* ====== الشاشات المتوسطة ====== */
+@media (max-width: 992px) {
+    .content {
+        width: 95%;
+    }
+
+    .section-1 h1 {
+        font-size: 38px;
+    }
+
+    .section-2 img {
+        max-width: 320px;
+    }
+}
+
+/* ====== الشاشات الصغيرة (الهاتف) ====== */
+@media (max-width: 768px) {
+
+    nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.95);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        border-radius: 0 0 15px 15px;
+    }
+
+    nav ul.show {
+        max-height: 250px;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .info {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .section-1 h1 {
+        font-size: 30px;
+    }
+
+    .section-1 h3 {
+        font-size: 20px;
+    }
+
+    .section-1 p {
+        font-size: 16px;
+    }
+
+    .section-2 img {
+        max-width: 250px;
+    }
+
+    .social-media {
+        display: none;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 25px;
+    }
+}
